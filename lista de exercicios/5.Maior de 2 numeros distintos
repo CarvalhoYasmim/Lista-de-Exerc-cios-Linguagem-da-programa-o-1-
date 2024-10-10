@@ -1,0 +1,17 @@
+# Função para encontrar o maior de dois números
+def maior_de_dois(num1, num2):
+    return max(num1, num2)
+
+# Entrada do usuário
+try:
+    num1 = float(input("Digite o primeiro valor: "))
+    num2 = float(input("Digite o segundo valor: "))
+
+    # Verifica se os números são distintos
+    if num1 != num2:
+        maior = maior_de_dois(num1, num2)
+        print(f"O maior entre {num1} e {num2} é {maior}.")
+    else:
+        print("Os números devem ser distintos. Tente novamente.")
+except ValueError:
+    print("Por favor, digite números válidos.")

@@ -1,0 +1,19 @@
+# Função para verificar se o algarismo aparece no número
+def verificar_algarismo(numero, algarismo):
+    return str(algarismo) in str(numero)
+
+# Entrada do usuário
+try:
+    numero = int(input("Digite um número inteiro: "))
+    algarismo = int(input("Digite um algarismo (0 a 9): "))
+
+    if 0 <= algarismo <= 9:
+        if verificar_algarismo(numero, algarismo):
+            print(f"O algarismo {algarismo} aparece no número {numero}.")
+        else:
+            print(f"O algarismo {algarismo} não aparece no número {numero}.")
+    else:
+        print("Por favor, digite um algarismo válido (0 a 9).")
+
+except ValueError:
+    print("Por favor, digite números válidos.")

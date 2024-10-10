@@ -1,0 +1,16 @@
+# Função para calcular a maior diferença entre três números
+def maior_diferenca(num1, num2, num3):
+    maior = max(num1, num2, num3)
+    menor = min(num1, num2, num3)
+    return maior - menor
+
+# Entrada do usuário
+try:
+    num1 = float(input("Digite o primeiro número: "))
+    num2 = float(input("Digite o segundo número: "))
+    num3 = float(input("Digite o terceiro número: "))
+
+    diferenca = maior_diferenca(num1, num2, num3)
+    print(f"A maior diferença entre os números lidos é {diferenca}.")
+except ValueError:
+    print("Por favor, digite números válidos.")

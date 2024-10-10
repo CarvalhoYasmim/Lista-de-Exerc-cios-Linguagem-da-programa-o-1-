@@ -1,0 +1,20 @@
+# Função para verificar o tipo do caractere
+def tipo_caractere(caractere):
+    if caractere.isupper():
+        return "Letra maiúscula."
+    elif caractere.islower():
+        return "Letra minúscula."
+    elif caractere.isdigit():
+        return "Caractere numérico."
+    else:
+        return "Símbolo especial."
+
+# Entrada do usuário
+caractere = input("Digite um caractere: ")
+
+# Verifica se o usuário digitou apenas um caractere
+if len(caractere) == 1:
+    resultado = tipo_caractere(caractere)
+    print(f"O caractere '{caractere}' é: {resultado}")
+else:
+    print("Por favor, digite apenas um caractere.")

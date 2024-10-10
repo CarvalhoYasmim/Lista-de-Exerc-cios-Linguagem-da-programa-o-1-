@@ -1,0 +1,12 @@
+# Função para inverter o número
+def inverter_numero(numero):
+    return str(numero)[::-1]  # Inverte a string do número
+
+# Entrada do usuário
+try:
+    numero = int(input("Digite um número inteiro: "))
+    numero_invertido = inverter_numero(numero)
+    
+    print(f"O número {numero} gera o número invertido {numero_invertido}.")
+except ValueError:
+    print("Por favor, digite um número inteiro válido.")

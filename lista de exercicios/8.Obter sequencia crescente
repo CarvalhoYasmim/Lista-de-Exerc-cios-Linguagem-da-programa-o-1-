@@ -1,0 +1,31 @@
+# Inicializa as variáveis
+numeros = []
+soma = 0
+
+# Lê o primeiro número
+try:
+    primeiro_numero = float(input("Digite um número: "))
+    numeros.append(primeiro_numero)
+    soma += primeiro_numero
+
+    while True:
+        numero = float(input("Digite o próximo número: "))
+        
+        if numero < primeiro_numero:
+            break
+            
+        numeros.append(numero)
+        soma += numero
+        primeiro_numero = numero  # Atualiza o último número lido
+
+    # Calcula a quantidade e a média
+    quantidade = len(numeros)
+    media = soma / quantidade if quantidade > 0 else 0
+
+    # Exibe os resultados
+    print(f"Soma: {soma}")
+    print(f"Quantidade de números: {quantidade}")
+    print(f"Média aritmética: {media:.2f}")
+
+except ValueError:
+    print("Por favor, digite números válidos.")
